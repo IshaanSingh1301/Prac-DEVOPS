@@ -9,5 +9,8 @@ pipeline{
         sh 'ls'
       }
     }
+    stage('deply'){
+      sh 'docker built -t test/demo .'
+      sh 'docker run test/demo'
   }
 }
