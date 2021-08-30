@@ -11,7 +11,7 @@ pipeline{
     }
     stage('deply'){
       steps{
-      sh 'docker built -t test/demo .'
+      sh 'docker build -t test/demo .'
       sh 'docker run test/demo'
       }
     }
