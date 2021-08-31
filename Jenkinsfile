@@ -12,7 +12,7 @@ pipeline{
     stage('deply'){
       steps{
       sh 'docker build -t test/demo .'
-      sh 'docker run -d test/demo'
+      sh 'docker run -d -p 80:80 test/demo'
       }
     }
   }
