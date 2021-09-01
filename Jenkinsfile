@@ -12,6 +12,7 @@ pipeline{
     stage('deply'){
       steps{
       sh 'docker build -t test/demo .'
+      sh 'docker run --rm test/demo
       }
     }
   }
